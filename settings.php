@@ -80,8 +80,8 @@ if(!class_exists('CAD_The_Playground_Lounge_Settings'))
         {
             add_submenu_page(
                 'edit.php?post_type='.$GLOBALS['post_type'] ,
-                __('Test Settings','menu-test'), 
-                __('Test Settings','menu-test'), 
+                __('Settings','menu-test'), 
+                __('Settings','menu-test'), 
                 'manage_options', 
                 'testsettings', 
                 array(&$this, 'plugin_settings_page')

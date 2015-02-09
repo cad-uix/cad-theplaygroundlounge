@@ -114,14 +114,9 @@ get_header(); ?>
 						
 						<?php wp_nonce_field('reservation_submit','reservation_nonce'); ?>
 						
-						
-						
-						
-
 						<h3>Choose your Seat <button type="submit" class="btn btn-primary pull-right">Reserve</button></h3>
 
 						<hr>
-
 
 						<?php
 

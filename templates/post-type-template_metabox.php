@@ -18,11 +18,34 @@
     </tr>
 
     <tr valign="top">
-        <th class="metabox_label_column">
-            <label for="player_list">Player List</label>
-        </th>
-        <td>
-            <input type="text" id="player_list" name="player_list" value="<?php echo @get_post_meta($post->ID, 'player_list', true); ?>" />
+
+        <td colspan="">
+        <b>Player List</b>
+            
+        
+    <?php
+        // $player_list = @get_post_meta($post->ID, 'player_list', true);  
+
+        // echo $player_list;
+
+
+        $player_list_get = str_replace("'",'"', @get_post_meta($post->ID, 'player_list', true) );
+
+        $player_list = json_decode('['.$player_list_get.']');
+
+        //print_r($player_list) ;
+
+        echo "<ul>";
+        foreach ($player_list as $var) {
+            echo "<li>";
+            echo "User: ", $var[0], " <br> Chair: ", $var[1];
+            echo "</li>";
+        }
+        echo "</ul>";
+
+    ?>
+        
         </td>
+    
     </tr>           
 </table>

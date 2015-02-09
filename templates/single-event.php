@@ -168,7 +168,9 @@ get_header(); ?>
 						<input type="hidden" id="prev_reserved" name="prev_reserved" value=" <?php echo get_post_meta(get_the_ID(), 'player_list', true) ?>">
 
 						<input type="hidden" id="reserve" name="reserve" value="true">
-
+						
+						<div class="clearfix">&nbsp;</div>
+						<hr>
 						<div class="form-group">
 							<button type="submit" class="btn btn-default">Join</button>
 						</div>

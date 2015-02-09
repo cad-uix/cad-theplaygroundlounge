@@ -144,7 +144,7 @@ get_header(); ?>
 								<div  class="radio
 
 								<?php $id = searchForId($table_chair, $player_list, 1);
-								        	if ($id == 1) echo 'text-muted';
+								        	if ($id == 1) echo 'bg-danger';
 								?>
 
 								">

@@ -76,6 +76,9 @@ get_header(); ?>
 					<b>Date of Game:</b> 
 					<?php echo get_post_meta(get_the_ID(), 'play_date', true); ?> <br>
 
+					<b>Time of Game:</b> 
+					<?php echo get_post_meta(get_the_ID(), 'play_time', true); ?> <br>
+
 					<?php 
 
 					function current_page_url() {
@@ -104,12 +107,21 @@ get_header(); ?>
 
 					 }
 					?>
+
+					<hr>
 					
 					<form  role="form" action="<?php echo current_page_url();  ?>" method="post" enctype="multipart/form-data">
 						
 						<?php wp_nonce_field('reservation_submit','reservation_nonce'); ?>
+						
+						
+						
+						
 
-						<h4>Open table</h4>
+						<h3>Choose your Seat <button type="submit" class="btn btn-primary pull-right">Reserve</button></h3>
+
+						<hr>
+
 
 						<?php
 
@@ -171,9 +183,7 @@ get_header(); ?>
 						
 						<div class="clearfix">&nbsp;</div>
 						<hr>
-						<div class="form-group">
-							<button type="submit" class="btn btn-default">Join</button>
-						</div>
+						
 
 					</form> 
 

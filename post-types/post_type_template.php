@@ -9,7 +9,8 @@ if(!class_exists('Post_Type_Template'))
 		
 		private $_meta	= array(
 			'play_date',
-			'player_list',
+            'play_time',
+			'player_list'
 		);
 		
     	/**
